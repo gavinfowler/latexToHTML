@@ -11,23 +11,33 @@ document.addEventListener('DOMContentLoaded', function () {
   var cssObj = document.getElementById("css");
   var cssTag = css.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   cssObj.innerHTML = cssTag;
-  
+
   document.getElementById('renderButton').onclick = function (element) {
+    try {
+      // enable copy button
+      copyButton.disabled = false;
 
-    copyButton.disabled = false;
-    var latex = input.value;
-    latex = latex.replace(/\//g, "\\\\");
+      // get value from input and fix '\'
+      var latex = input.value;
+      latex = latex.replace(/\//g, "\\\\");
 
-    katex = translator.renderToString(latex);
+      // translate to katex
+      katex = translator.renderToString(latex);
 
-    var stringKatex = katex.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      // enable katex to be printed out
+      var stringKatex = katex.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-    htmlCode.innerHTML =  stringKatex;
-
-    display.innerHTML = katex;
+      // print katex to document
+      htmlCode.innerHTML = stringKatex;
+      display.innerHTML = katex;
+    } catch (err) {
+      console.log(err);
+      htmlCode.innerHTML = err;
+      display.innerHTML = "ERROR";
+    }
   };
 
-  copyButton.onclick = function(){
+  copyButton.onclick = function () {
     htmlCode.select();
     document.execCommand("copy");
   }
