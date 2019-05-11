@@ -11,14 +11,14 @@
 
 <body>
   <textarea id="input" rows="4" cols="50"
-    style="overflow:auto;resize:none">{\int_{{0}}^{{1}}}{f{{\left({x}\right)}}}{\left.{d}{x}\right.}</textarea>
-  <br>
-  <button id="renderButton">Convert to HTML</button>
-  <p>Display area</p>
-  <div id="display"></div>
+    style="overflow:auto;resize:none;">{\int_{{0}}^{{1}}}{f{{\left({x}\right)}}}{\left.{d}{x}\right.}</textarea>
+  <button id="renderButton" style="padding:5;">Convert to HTML</button>
+  <p>Include the following css link:</p>
+  <p id="css"></p>
+  <p>How the LaTeX will render</p>
+  <div id="display" style="font-size: 2em;"></div>
   <p>HTML: </p>
   <code id="code"></code>
-
 </body>
 
 </html>

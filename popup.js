@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var input = document.getElementById("input");
   var display = document.getElementById("display");
   var htmlCode = document.getElementById("code");
+  var cssObj = document.getElementById("css");
+  var cssTag = css.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  cssObj.innerHTML = cssTag;
   document.getElementById('renderButton').onclick = function (element) {
 
     var latex = input.value;

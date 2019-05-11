@@ -1,19 +1,19 @@
 {
   "name": "LaTeX to HTML",
   "version": "1.0",
-  "description": "LaTeX to Html Extension!",
+  "description": "LaTeX to Html Extension! Idea for logos: 'L->H' or 'LaTeX -> HTML'",
   "permissions": [
     "activeTab"
   ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_icon": "images/latexLogo.png"
+    "default_icon": "images/icon.png"
   },
   "icons": {
-    "16": "images/latexLogo.png",
-    "32": "images/latexLogo.png",
-    "48": "images/latexLogo.png",
-    "128": "images/latexLogo.png"
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
   },
   "manifest_version": 2
 }
