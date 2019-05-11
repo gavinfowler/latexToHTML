@@ -1,12 +1,15 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', function () {
-  let input = document.getElementById("input").innerHTML;
-  let display = document.getElementById("display");
-  let htmlCode = document.getElementById("code");
 
+document.addEventListener('DOMContentLoaded', function () {
+  var input = document.getElementById("input");
+  var display = document.getElementById("display");
+  var htmlCode = document.getElementById("code");
   document.getElementById('renderButton').onclick = function (element) {
-    display.innerHTML = "DISPLAY: " + input;
-    console.log(input);
-    htmlCode.innerHTML = "CODE: " + input;
+
+    var latex = input.value;
+    latex = latex.replace(/\/[^\/]/g, "\\\\");
+
+    htmlCode.innerHTML = latex;
+    katex.render(latex, display);
   }
 })
