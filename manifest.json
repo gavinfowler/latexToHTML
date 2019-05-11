@@ -1,0 +1,11 @@
+{
+  "name": "Pretty Rendering of Math",
+  "version": "1.0",
+  "description": "Latex to Html Extension!",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/latexLogo.png"
+  },
+  "manifest_version": 2
+}
