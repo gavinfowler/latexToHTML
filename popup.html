@@ -10,23 +10,34 @@
       font-weight: bold;
       font-size: 20px;
     }
+
+    #display {
+      font-size: 2em;
+    }
+
+    #copy #renderButton {
+      display: block;
+    }
+
+    textarea {
+      overflow: auto;
+      resize: none;
+    }
   </style>
 </head>
 
 <body>
-  <textarea id="input" rows="2" cols="75"
-    style="overflow:auto;resize:none;">{\int_{{0}}^{{1}}}{f{{\left({x}\right)}}}{\left.{d}{x}\right.}</textarea>
+  <textarea id="input" rows="2" cols="75">{\int_{{0}}^{{1}}}{f{{\left({x}\right)}}}{\left.{d}{x}\right.}</textarea>
   <p></p>
-  <button id="renderButton" style="display: block">Convert to HTML</button>
+  <button id="renderButton">Convert to HTML</button>
   <p class="title">Include the following css link:</p>
   <p id="css"></p>
-  <p class="title">Rendering:</p>
-  <div id="display" style="font-size: 2em;"></div>
+  <p class="title">Rendered:</p>
+  <div id="display">Input a function to render...</div>
   <p class="title">HTML: </p>
-  <button id="copy" disabled style="display: block;">Copy HTML to clipboard</button>
-  <br>
-  <textarea id="code" rows="4" cols="75"
-  style="overflow:auto;resize:none;">Input a function to render...</textarea>
+  <button id="copy" disabled>Copy HTML to clipboard</button>
+  <p></p>
+  <textarea id="code" rows="4" cols="75">Input a function to render...</textarea>
 </body>
 
 </html>
