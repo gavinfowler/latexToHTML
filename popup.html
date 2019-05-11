@@ -2,23 +2,31 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="katex/katex.css">
-  <script src="katex/katex.js"></script>
+  <link rel="stylesheet" href="katex/katex.min.css">
+  <script src="katex/katex.min.js"></script>
   <script src="popup.js"></script>
   <style>
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+    }
   </style>
 </head>
 
 <body>
-  <textarea id="input" rows="4" cols="50"
+  <textarea id="input" rows="2" cols="75"
     style="overflow:auto;resize:none;">{\int_{{0}}^{{1}}}{f{{\left({x}\right)}}}{\left.{d}{x}\right.}</textarea>
-  <button id="renderButton" style="padding:5;">Convert to HTML</button>
-  <p>Include the following css link:</p>
+  <p></p>
+  <button id="renderButton" style="display: block">Convert to HTML</button>
+  <p class="title">Include the following css link:</p>
   <p id="css"></p>
-  <p>How the LaTeX will render</p>
+  <p class="title">Rendering:</p>
   <div id="display" style="font-size: 2em;"></div>
-  <p>HTML: </p>
-  <code id="code"></code>
+  <p class="title">HTML: </p>
+  <button id="copy" disabled style="display: block;">Copy HTML to clipboard</button>
+  <br>
+  <textarea id="code" rows="4" cols="75"
+  style="overflow:auto;resize:none;">Input a function to render...</textarea>
 </body>
 
 </html>

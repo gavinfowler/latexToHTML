@@ -1,7 +1,7 @@
 {
   "name": "LaTeX to HTML",
   "version": "1.0",
-  "description": "LaTeX to Html Extension! Idea for logos: 'L->H' or 'LaTeX -> HTML'",
+  "description": "Enter LaTeX code and the extension will convert the code to HTML.",
   "permissions": [
     "activeTab"
   ],
