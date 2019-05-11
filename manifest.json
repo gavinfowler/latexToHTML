@@ -1,7 +1,7 @@
 {
-  "name": "Latex to HTML",
+  "name": "LaTeX to HTML",
   "version": "1.0",
-  "description": "Latex to Html Extension!",
+  "description": "LaTeX to Html Extension!",
   "permissions": [
     "activeTab"
   ],
