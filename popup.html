@@ -7,6 +7,7 @@
   <script src="popup.js"></script>
   <style>
     .title {
+      display: inline;
       font-weight: bold;
       font-size: 20px;
     }
@@ -15,29 +16,45 @@
       font-size: 2em;
     }
 
-    #copy #renderButton {
-      display: block;
-    }
-
     textarea {
       overflow: auto;
       resize: none;
+    }
+
+    button {
+      display: inline-block;
+      margin: 10px 10px 10px 0px;
+      padding: 8px 15px;
+      background: #2db92d;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      transition: all 0.3s ease-out;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        0 2px 2px rgba(0, 0, 0, 0.3),
+        0 0 4px 1px rgba(0, 0, 0, 0.2);
+      /* Font styles */
+      text-decoration: none;
+      /* text-shadow: 0 1px rgba(255, 255, 255, 0.7); */
+      font-weight: bolder;
+    }
+
+    button:hover {
+      background: #46d246
     }
   </style>
 </head>
 
 <body>
   <textarea id="input" rows="2" cols="75">{\int_{{0}}^{{1}}}{f{{\left({x}\right)}}}{\left.{d}{x}\right.}</textarea>
-  <p></p>
-  <button id="renderButton">Convert to HTML</button>
-  <p class="title">Include the following css link:</p>
+  <button id="renderButton">Convert to HTML</button><br>
+  <p class="title">Include the following css link (only once):</p>
   <p id="css"></p>
   <p class="title">Rendered:</p>
   <div id="display">Input a function to render...</div>
   <p class="title">HTML: </p>
-  <button id="copy" disabled>Copy HTML to clipboard</button>
-  <p></p>
   <textarea id="code" rows="4" cols="75">Input a function to render...</textarea>
+  <button id="copy" disabled >Copy HTML to clipboard</button>
 </body>
 
 </html>
